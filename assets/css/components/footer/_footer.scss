@@ -1,0 +1,61 @@
+@import '../../variable/variables';
+
+
+.rodape {
+    max-width: 1216px;
+    margin: 0 auto;
+    padding: 18px 0;
+
+    .rodape-lista {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+
+        &__link {
+            color: $branco;
+            font-size: 16px;
+            line-height: 19px;
+            text-decoration: none;
+
+            .link-destaque {
+                font-family: $fonte-secundaria;
+                font-weight: 600;
+                background: $color-grandient;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+            }
+
+            .icon {
+                font-size: 24px;
+                font-weight: 700;
+            }
+
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .rodape {
+        padding: 24px;
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+    .rodape-lista {
+        flex-direction: column;
+        text-align: center;
+
+        .rodape-lista__item:nth-child(2) {
+            display: none;
+        }
+
+
+        .rodape-lista__link {
+            font-size: 14px;
+            line-height: 140%;
+        }
+    }
+}

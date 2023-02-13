@@ -1,0 +1,29 @@
+@import './variables';
+
+
+
+body {
+    background-color: $preto;
+    font-family: $fonte-primaria;
+    font-weight: 400;
+}
+
+
+.container {
+    max-width: 1216px;
+    margin: 0 auto;
+    height: calc(100vh - 177px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+
+@media screen and (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+        height: auto;
+        row-gap: 40px;
+        padding: 24px 20px;
+    }
+}

@@ -1,0 +1,61 @@
+@import '../../variable/variables';
+
+
+.cabecalho__promocao {
+    background: $color-grandient;
+    color: $branco;
+    padding: 0.7em 0px;
+    text-align: center;
+
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1216px;
+    margin: 0 auto;
+    padding-top: 32px;
+
+    &__logo {
+        background: url(../img/logo.png) center / cover no-repeat;
+        width: 94px;
+        height: 32px;
+    }
+
+    &__btn {
+        color: $branco;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 19px;
+        text-transform: uppercase;
+        text-decoration: none;
+        border: 1px solid;
+        border-image-slice: 1;
+        border-image-source: $color-grandient;
+        padding: 14px 24px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .menu {
+        padding:24px;
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+    .menu {
+        flex-wrap: wrap;
+        flex-direction: column;
+        &__logo {
+            text-align: center;
+            margin: 32px 0px;
+        }
+        &__btn {
+            width: 100%;
+            box-sizing: border-box;
+            text-align: center;
+        }
+    }
+}

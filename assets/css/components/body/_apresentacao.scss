@@ -1,0 +1,192 @@
+@import '../../variable/variables';
+
+.container-conteudo {
+
+    &__menbros {
+        color: $branco;
+        background: $preto-escuro;
+        border: 1px solid #130B1D;
+        ;
+        border-radius: 32px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        padding: 8px 32px;
+        text-decoration: none;
+
+        &::before {
+            content: '';
+            background: url(../img/icon.png) center / cover no-repeat;
+            width: 24px;
+            height: 24px;
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 8px;
+        }
+
+    }
+
+    &__titulo {
+        color: $branco;
+        font-family: $fonte-secundaria;
+        font-weight: 600;
+        font-size: 48px;
+        line-height: 64px;
+        margin: 40px 0px;
+
+        .titulo-destaque {
+            background: $color-grandient;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    }
+
+    &__descricao {
+        color: $cinza;
+        font-size: 26px;
+        line-height: 160%;
+    }
+}
+
+
+.card {
+    width: 488px;
+    background: $branco;
+    border-radius: 4px;
+    padding: 32px;
+
+    .card-header {
+        display: flex;
+        column-gap: 24px;
+        align-items: center;
+
+
+        &__preco {
+            color: $branco;
+            background-color: $preto;
+            border-radius: 4px;
+            font-family: $fonte-secundaria;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 150%;
+            text-transform: uppercase;
+            padding: 6px 28px;
+        }
+
+        &__descricao {
+            color: $preto-escuro;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 150%
+        }
+    }
+
+    &__preco-info {
+        color: $preto-escuro;
+        display: inline-block;
+        font-family: $fonte-secundaria;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 150%;
+        margin-top: 58px;
+
+        b {
+            text-decoration: line-through;
+        }
+    }
+
+    &__preco-destaque {
+        color: $preto;
+        font-family: $fonte-secundaria;
+        font-weight: 600;
+        font-size: 72px;
+        line-height: 150%;
+        margin-bottom: 73px;
+    }
+
+    &__btn {
+        background: $color-grandient;
+        border-radius: 4px;
+        color: $branco;
+        display: inline-block;
+        font-size: 20px;
+        font-family: $fonte-secundaria;
+        font-weight: 600;
+        width: 100%;
+        text-align: center;
+        padding: 20px 0px;
+        text-decoration: none;
+        text-transform: uppercase;
+        line-height: 25px;
+    }
+
+    &__pagamento {
+        color: $preto-escuro;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 150%;
+        text-align: center;
+        margin: 24px 0 8px 0;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .container-conteudo {
+        text-align: center;
+
+        &__menbros {
+            font-size: 13px;
+            line-height: 17px;
+        }
+
+        &__titulo {
+            font-size: 24px;
+            line-height: 32px;
+            margin-bottom: 16px;
+        }
+
+        &__descricao {
+            font-size: 14px;
+            line-height: 160%;
+        }
+    }
+
+    .card {
+        width: auto;
+        padding: 24px 16px;
+
+        .card-header {
+
+            &__preco,
+            &__descricao {
+                font-size: 14px;
+                line-height: 150%;
+            }
+        }
+
+        &__preco-info {
+            font-size: 18px;
+            line-height: 150%;
+            margin: 32px 0 5px 0;
+        }
+
+        &__preco-destaque {
+            font-size: 48px;
+            line-height: 150%;
+            margin-bottom: 32px;
+        }
+
+        &__btn {
+            font-size: 16px;
+            line-height: 20px;
+            padding: 14px 0;
+        }
+
+        &__pagamento {
+            font-size: 12px;
+            line-height: 150%;
+            margin: 16px 0 0 0
+        }
+    }
+}
